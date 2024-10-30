@@ -52,6 +52,8 @@ try:
     survey_radio_element = from_element.find_element(By.XPATH, "//input[@value='-2']")
     driver.execute_script("arguments[0].click();", survey_radio_element)
 
+    # Submit the form 
+    from_element.submit
 except Exception as e:
     print("An error occurred:", e)
 finally:
