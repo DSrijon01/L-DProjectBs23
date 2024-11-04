@@ -10,7 +10,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
 # Define mobile emulation
-mobile_emulation = {'deviceName': 'iPad Mini'}
+mobile_emulation = {'deviceName': 'iPad Pro'}
 
 # Configure Chrome options for mobile emulation
 chrome_options = webdriver.ChromeOptions()
