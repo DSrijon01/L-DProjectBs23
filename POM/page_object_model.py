@@ -19,3 +19,15 @@ import time
 from datetime import datetime
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+
+def getWebElement(self, locatorValue, locatorType):
+    webElement = None
+    try:
+        locatorType = locatorType.lower()
+        locatorByType = self.getLocatorType(locatorType)
+        webElement = self.driver.find_element(locatorByType, locatorValue)
+        self.log.info("WebElement found with locator value " + locatorValue + " using locatorType " + locatorByType)
+    except:
+        self.log.error("WebElement not found with locator value " + locatorValue + " using locatorType " + locatorType)
+        print_stack()
+    return webElement
