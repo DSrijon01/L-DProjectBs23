@@ -31,3 +31,25 @@ def getWebElement(self, locatorValue, locatorType):
         self.log.error("WebElement not found with locator value " + locatorValue + " using locatorType " + locatorType)
         print_stack()
     return webElement
+
+## Click Event
+def clickOnElement(self, locatorValue, locatorType):
+    try:
+        locatorType = locatorType.lower()
+        webElement = self.waitForElement(locatorValue, locatorType)
+        webElement.click()
+        self.log.info("Clicked on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+    except:
+        self.log.error("Unable to Click on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+        print_stack()
+
+## Click Event
+def clickOnElement(self, locatorValue, locatorType):
+    try:
+        locatorType = locatorType.lower()
+        webElement = self.waitForElement(locatorValue, locatorType)
+        webElement.click()
+        self.log.info("Clicked on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+    except:
+        self.log.error("Unable to Click on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+        print_stack()
