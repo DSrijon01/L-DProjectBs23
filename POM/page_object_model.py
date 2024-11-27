@@ -86,3 +86,14 @@ def clickOnElement(self, locatorValue, locatorType):
     except:
         self.log.error("Unable to Click on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
         print_stack()
+
+## Click Event
+def clickOnElement(self, locatorValue, locatorType):
+    try:
+        locatorType = locatorType.lower()
+        webElement = self.waitForElement(locatorValue, locatorType)
+        webElement.click()
+        self.log.info("Clicked on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+    except:
+        self.log.error("Unable to Click on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+        print_stack()
