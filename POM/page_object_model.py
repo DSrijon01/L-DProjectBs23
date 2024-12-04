@@ -129,3 +129,17 @@ def clickOnElement(self, locatorValue, locatorType):
     except:
         self.log.error("Unable to Click on WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
         print_stack()
+
+## Fetch Text
+def getText(self, locatorValue, locatorType="id"):
+    elementText = None
+    try:
+        locatorType = locatorType.lower()
+        webElement = self.waitForElement(locatorValue, locatorType)
+        elementText = webElement.text
+        self.log.info("Got the text " + elementText + " from WebElement with locator value " + locatorValue + " using locatorType " + locatorType)
+    except:
+        self.log.error("Unable to get the text " + elementText + " from WebElement with locator value " + locatorValue + "using locatorType " + locatorType)
+        print_stack()
+
+    return elementText
