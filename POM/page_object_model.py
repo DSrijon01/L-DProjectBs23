@@ -143,3 +143,7 @@ def getText(self, locatorValue, locatorType="id"):
         print_stack()
 
     return elementText
+
+## Save Screen shots Using Allure Reporting
+def takeScreenshot(self,text):
+    allure.attach(self.driver.get_screenshot_as_png(),name=text, attachment_type=AttachmentType.PNG)
