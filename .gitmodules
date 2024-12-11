@@ -1,0 +1,3 @@
+[submodule "POM/GuidedProject_3/page-object-python-selenium"]
+	path = POM/GuidedProject_3/page-object-python-selenium
+	url = https://github.com/gunesmes/page-object-python-selenium
